@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+    Date <input type="text" name="date" autocomplete="off" required>
+    Category <input type="text" name="category" autocomplete="off" required>
+    Amount <input type="text" name="amount" autocomplete="off" required>
+    <input class="btn" type="submit" name="submit" value="Add">
+</form>
+{% endblock %}

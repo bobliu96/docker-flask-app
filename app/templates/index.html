@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 style="text-align: center">Invitations</h3>
+<p>
+    The followings are recent IRCC invitations. Usually IRCC invites candidates once or twice per months.
+    New Invitations can be updated in the "Add Invitation" section. Graph will also update accordingly.
+</p>
+<ul class="invitation-list">
+    {% for item in invitations %}
+    <li>{{ item.date }} - {{ item.category }} - {{ item.amount }}</li>
+    {% endfor %}
+</ul>
+<a href="/bar-plot.png">
+    <img src=/bar-plot.png alt="Chart" height="auto" width="100%">
+</a>
+<h3 style="text-align: center">Distributions</h3>
+<p>IRCC updates candidate score distributions frequently. It indicates candidate score range in the pool.</p>
+<a href="/pie-plot.png">
+    <img src=/pie-plot.png alt="Chart" height="auto" width="100%">
+</a>
+<p>For more information, please click on the link below</p>
+<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/
+immigrate-canada/express-entry/submit-profile/rounds-invitations.html">IRCC Round of Invitations</a>
+{% endblock %}
